@@ -7,14 +7,59 @@ public class Pessoa {
 	
 	public Pessoa(String nome, double peso, double altura)
 	{
-		this.nome = nome;
-		this.peso = peso;
-		this.altura = altura;
+		this.setNome(nome);
+		this.setPeso(peso);
+		this.setAltura(altura);
+	}
+	
+	public String getNome()
+	{
+		return this.nome;
+	}
+	
+	public double getPeso()
+	{
+		return this.peso;
+	}
+	
+	public double getAltura()
+	{
+		return this.altura;
+	}
+	
+	public void setNome(String novoNome)
+	{
+		if (!novoNome.isBlank())
+		{
+			this.nome = novoNome;
+			return;
+		}
+		System.out.println("Nome inválido.");
+	}
+	
+	public void setPeso(double novoPeso)
+	{
+		if (novoPeso > 0)
+		{
+			this.peso = novoPeso;
+			return;
+		}
+		System.out.println("Peso inválido.");
+	}
+	
+	public void setAltura(double novaAltura)
+	{
+		if (novaAltura > 0)
+		{
+			this.altura = novaAltura;
+			return;
+		}
+		System.out.println("Altura inválido.");
 	}
 	
 	public double calcularIMC()
 	{
-		return this.peso * (this.altura * this.altura);
+		return this.peso / (this.altura * this.altura);
 	}
 	
 	public String classificacaoIMC()

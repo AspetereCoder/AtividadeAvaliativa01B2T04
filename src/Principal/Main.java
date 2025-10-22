@@ -10,7 +10,10 @@ public class Main {
 //		atividadeDois();
 //		atividadeTres();
 //		atividadeQuatro();
-		atividadeCinco();
+//		atividadeCinco();
+//		atividadeSeis();
+//		atividadeSete();
+		atividadeOito();
 	}
 
 	public static void atividadeUm()
@@ -94,7 +97,7 @@ public class Main {
 		System.out.println("Musica: " + m1.getTitulo() + " - Duração: " + m1.formatarDuracao() + "m");
 		System.out.println("Musica: " + m2.getTitulo() + " - Duração: " + m2.formatarDuracao() + "m");
 	}
-	x
+	
 	public static void atividadeSeis()
 	{
 //		Crie a classe Pessoa com atributos privados: nome (String), peso (double) e altura (double).
@@ -102,9 +105,35 @@ public class Main {
 //		 Método calcularIMC() que retorna peso / (altura²).
 //		 Método classificacaoIMC() que retorna uma string com a faixa (ex: “Normal”, “Sobrepeso”...).
 //		 No main, crie uma pessoa e exiba IMC e classificação.
-		var p1 = new Pessoa("Patrick", 73.5, 1.79);
+		var p1 = new Pessoa("Patrick", 59.0, 1.63);
 		
 		var imc = p1.calcularIMC();
+		var classificaoIMC = p1.classificacaoIMC();
 		
+		System.out.println("IMC: " + imc);
+		System.out.println(classificaoIMC);
+		
+	}
+	
+	public static void atividadeSete()
+	{
+//		Crie a classe ContaLuz com atributos privados: consumoKwh (double) e valorKwh (double).
+//		Valide: ambos maiores que 0.
+//		Método calcularValorTotal() que retorna consumo × valor por kWh.
+//		No main, crie uma conta, calcule e exiba o valor a pagar.
+		var contaLuz = new ContaLuz(100, 3.5);
+		System.out.println("Valor da conta: R$" + contaLuz.calcularValorTotal());
+	}
+	
+	public static void atividadeOito()
+	{
+//		Crie a classe BicicletaAlugada com atributos privados: horas (int) e valorHora (double).
+//		Valide: horas ≥ 1; valorHora > 0.
+//		Método calcularValor() retorna horas × valorHora.
+//		No main, simule um aluguel e exiba o valor final.
+		var bicicletaAlugada = new BicicletaAlugada(20, 5.65);
+		System.out.println("Quantidade de horas alugadas: " + bicicletaAlugada.getHoras());
+		System.out.println("Valor da hora: R$" + bicicletaAlugada.getValorHora());
+		System.out.println("Valor à pagar: R$" + bicicletaAlugada.calcularValor());
 	}
 }
