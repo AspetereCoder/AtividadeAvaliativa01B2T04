@@ -5,6 +5,7 @@ import classes.*;
 public class Main {
 
 	public static void main(String[] args) {
+		// basta descomentar os métodos abaixo
 
 //		atividadeUm();
 //		atividadeDois();
@@ -13,7 +14,10 @@ public class Main {
 //		atividadeCinco();
 //		atividadeSeis();
 //		atividadeSete();
-		atividadeOito();
+//		atividadeOito();
+//		atividadeNove();
+//		atividadeDez();
+
 	}
 
 	public static void atividadeUm()
@@ -135,5 +139,39 @@ public class Main {
 		System.out.println("Quantidade de horas alugadas: " + bicicletaAlugada.getHoras());
 		System.out.println("Valor da hora: R$" + bicicletaAlugada.getValorHora());
 		System.out.println("Valor à pagar: R$" + bicicletaAlugada.calcularValor());
+	}
+	
+	public static void atividadeNove()
+	{
+//		Crie a classe ProdutoEstoque com nome (String) e quantidade (int).
+//		Valide: nome não vazio; quantidade ≥ 0.
+//		Métodos:
+//		- adicionarEstoque(int qtd)
+//		- removerEstoque(int qtd) (não pode deixar negativo)
+//		No main, crie um produto, adicione/remova e exiba a quantidade final.
+		var p1 = new ProdutoEstoque("", 30);
+		
+		p1.removerEstoque(50);
+		
+		p1.adicionarEstoque(100);
+		
+		System.out.println("Quantidade final em estoque: " + p1.getQuantidade());
+		
+	}
+	
+	public static void atividadeDez()
+	{
+//		Crie a classe Temperatura com atributo privado celsius (double).
+//		Valide que a temperatura não seja menor que -273.15°C (zero absoluto).
+//		Métodos:
+//		- paraFahrenheit() retorna (celsius × 9/5) + 32
+//		- paraKelvin() retorna celsius + 273.15
+//		No main, crie uma temperatura e mostre as conversões.
+		var temp = new Temperatura(30);
+		System.out.println("Temperatura inicial: " + temp.getTemperatura() + "C");
+		var tempFahrenheit = temp.paraFahrenheit();
+		System.out.println("Convertido para Fahrenheit: " + tempFahrenheit + "F");
+		var tempKelvin = temp.paraKelvin();
+		System.out.println("Convertido para Kelvin: " + tempKelvin + "K");
 	}
 }
